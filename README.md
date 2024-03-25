@@ -3,7 +3,7 @@
 ![](./design/desktop-preview.jpg)
 
 - Solution URL: https://github.com/yohannes-Te/loopstudios-landing-page-main
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL:(https://yohannes-te.github.io/loopstudios-landing-page-main/)
 
 ### Built with
 
