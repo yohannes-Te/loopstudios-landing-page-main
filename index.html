@@ -11,64 +11,94 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- ion-icon -->
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    defer
+    ></script>
+    <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    defer
+    ></script>
+    
+    <!-- hamburger menu js-->
+    <script src="js/app.js" defer></script>
 
     <title>Loopstudios landing page</title>
   </head>
-  <body>
+  <body class="body">
     <header id="hero">
       <div class="container max-w-6xl mx-auto py-12 px-6">
         <nav class="flex items-center justify-between font-normal text-white">
-          <a href="index.html"><img src="images/logo.svg" alt="" /></a>
-          <ul class="hidden h-10 md:flex md space-x-8">
-            <!-- font-alata -->
-            <li class="group">
-              <a href="#">About</a>
-              <div
-                class="mx-2 duration-200 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </li>
+          <a href="index.html" class="z-50"
+            ><img src="images/logo.svg" alt=""
+          /></a>
 
-            <li class="group">
-              <a href="#">Careers</a>
-              <div
-                class="mx-2 duration-200 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </li>
+          <!-- md:flex-row md:space-x-8 -->
+          <div
+            class="navLink absolute md:static top-0 bottom-0 -left-full duration-300 w-full md:w-auto bg-black md:bg-opacity-0 min-h-screen md:min-h-fit pt-40 md:pt-0"
+          >
+            <ul
+              class="h-10 md:flex-row font-alata font-normal md:space-x-8 flex items-start flex-col py-1 pl-12 space-y-3 md:space-y-0 uppercase md:capitalize z-0 md:z-auto"
+            >
+        
+              <li class="group">
+                <a href="#">About</a>
+                <div
+                  class="mx-2 mt-1 duration-200 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </li>
 
-            <li class="group">
-              <a href="#"> Events</a>
-              <div
-                class="mx-2 duration-200 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </li>
+              <li class="group">
+                <a href="#">Careers</a>
+                <div
+                  class="mx-2 mt-1 duration-200 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </li>
 
-            <li class="group">
-              <a href="#">Products</a>
-              <div
-                class="mx-2 duration-200 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </li>
+              <li class="group">
+                <a href="#"> Events</a>
+                <div
+                  class="mx-2 mt-1 duration-200 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </li>
 
-            <li class="group">
-              <a href="#">Support</a>
-              <div
-                class="mx-2 duration-200 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </li>
-          </ul>
-          <div class="md:hidden" >
-            <button class=" " type="button">
-              <img src="images/icon-hamburger.svg" alt="">
-            </button>
+              <li class="group">
+                <a href="#">Products</a>
+                <div
+                  class="mx-2 mt-1 duration-200 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </li>
 
-            <button class="hidden">
-              <img src="images/icon-close.svg" alt="">
-            </button>
+              <li class="group">
+                <a href="#">Support</a>
+                <div
+                  class="mx-2 mt-1 duration-200 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </li>
+            </ul>
           </div>
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="md:hidden size-10 cursor-pointer"
+          ></ion-icon>
         </nav>
         <p
-          class="max-w-lg my-32 p-4 font-sans text-4xl text-white uppercase border-2 md:p-10 md:mx-0 md:text-6xl"
+          class="max-w-lg my-32 p-4 font-sans font-light text-4xl text-white uppercase border-2 md:p-10 md:mx-0 md:text-6xl"
         >
           Immersive experiences that deliver
         </p>
@@ -87,11 +117,11 @@
             class="top-48 pr-0 bg-white md:absolute md:right-0 md:py-20 md:pl-20"
           >
             <h2
-              class="max-w-lg mt-10 mb-6 font-sans text-4xl text-center text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left"
+              class="max-w-lg mt-10 mb-6 font-sans font-light text-4xl text-center text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left"
             >
               The leader in interactive VR
             </h2>
-            <p class="max-w-md text-center md:text-left">
+            <p class="max-w-md text-center font-sans font-light md:text-left text-gray-400">
               Founded in 2011, Loopstudios has been producing world-class
               virtual reality projects for some of the best companies around the
               globe. Our award-winning creations have transformed businesses
@@ -107,11 +137,10 @@
           class="container max-w-6xl mx-auto my-32 px-6 text-gray-900 md:px-0"
         >
           <div class="flex justify-center mb-20 md:justify-between">
-            <h2 class="text-4xl text-center uppercase md:text-left md:text-5xl">
+            <h2 class="text-4xl text-center font-sans font-light uppercase md:text-left md:text-5xl">
               Our creations
             </h2>
-            <button class="hidden btn md:block">
-              <!-- font-alata -->
+            <button class="hidden btn font-alata font-normal md:block">
               See all
             </button>
           </div>
@@ -299,9 +328,8 @@
             </div>
 
             <ul
-              class="flex flex-col items-center space-y-4 font-normal text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3"
+              class="flex flex-col items-center space-y-4 font-alata font-normal text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3"
             >
-              <!-- font-alata -->
               <li class="h-10 group">
                 <a href="#">About</a>
                 <div
